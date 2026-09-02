@@ -8,7 +8,7 @@ namespace AccountingSystem.Models
 {
     public class Customer
     {
-         public int Count { get; set; } = 0;
+        static public int Count { get; set; } = 0;
         public string Name { get; set; }    ="";
         public string Phone { get; set; }   ="";
         public string Address { get; set; } ="";
