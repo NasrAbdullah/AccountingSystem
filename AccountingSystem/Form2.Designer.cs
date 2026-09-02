@@ -53,6 +53,7 @@
             this.txtName.Size = new System.Drawing.Size(225, 34);
             this.txtName.TabIndex = 0;
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtName.TextChanged += new System.EventHandler(this.TxtName_TextChanged);
             // 
             // txtAddress
             // 
@@ -62,6 +63,7 @@
             this.txtAddress.Size = new System.Drawing.Size(225, 34);
             this.txtAddress.TabIndex = 0;
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtAddress.TextChanged += new System.EventHandler(this.TxtAddress_TextChanged);
             // 
             // button1
             // 
@@ -88,6 +90,7 @@
             this.dataGridView1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dataGridView1.Size = new System.Drawing.Size(551, 470);
             this.dataGridView1.TabIndex = 2;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DataGridView1_CellContentClick);
             // 
             // txtPhone
             // 
@@ -97,6 +100,7 @@
             this.txtPhone.Size = new System.Drawing.Size(225, 34);
             this.txtPhone.TabIndex = 0;
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtPhone.TextChanged += new System.EventHandler(this.TxtPhone_TextChanged);
             // 
             // label1
             // 
@@ -107,6 +111,7 @@
             this.label1.Size = new System.Drawing.Size(83, 24);
             this.label1.TabIndex = 3;
             this.label1.Text = "اسم العميل";
+            this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // label2
             // 
@@ -117,6 +122,7 @@
             this.label2.Size = new System.Drawing.Size(59, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "العنوان";
+            this.label2.Click += new System.EventHandler(this.Label2_Click);
             // 
             // label3
             // 
@@ -127,6 +133,7 @@
             this.label3.Size = new System.Drawing.Size(56, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "الجنس";
+            this.label3.Click += new System.EventHandler(this.Label3_Click);
             // 
             // label4
             // 
@@ -137,6 +144,7 @@
             this.label4.Size = new System.Drawing.Size(58, 24);
             this.label4.TabIndex = 3;
             this.label4.Text = "التلفون";
+            this.label4.Click += new System.EventHandler(this.Label4_Click);
             // 
             // cmbbxGender
             // 
@@ -145,6 +153,7 @@
             this.cmbbxGender.Name = "cmbbxGender";
             this.cmbbxGender.Size = new System.Drawing.Size(225, 21);
             this.cmbbxGender.TabIndex = 4;
+            this.cmbbxGender.SelectedIndexChanged += new System.EventHandler(this.CmbbxGender_SelectedIndexChanged);
             // 
             // button2
             // 
@@ -201,6 +210,7 @@
             this.label5.Size = new System.Drawing.Size(211, 63);
             this.label5.TabIndex = 5;
             this.label5.Text = "صفحة إضافة عميل";
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // Form2
             // 

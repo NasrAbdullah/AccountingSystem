@@ -74,5 +74,55 @@ namespace AccountingSystem
             // Not Ready
             //txtName.Text = dataGridView1
         }
+
+        private void TxtAddress_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void TxtPhone_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CmbbxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TxtName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
