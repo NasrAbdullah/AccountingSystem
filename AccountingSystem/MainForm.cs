@@ -55,5 +55,90 @@ namespace AccountingSystem
         {
             OpenControl(new Clients());
         }
+
+        private void BtnSales_Click(object sender, EventArgs e)
+        {
+            OpenControl(new SaleControl());
+        }
+
+        private void Btnexpenses_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void PanelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PanelLogo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FlowMenu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnPurchases_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelContent_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void BtnCash_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Btnreprts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnProducts_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnGoOut_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnSettings_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -14,8 +14,9 @@ namespace AccountingSystem
     public partial class Clients : UserControl
     {
         List<Customer> Customers = new List<Customer>();
-        int selectedId = -1;
 
+        int selectedId = -1;
+        int Client_id = 0;
 
         public Clients()
         {
@@ -25,7 +26,7 @@ namespace AccountingSystem
 
         private void UserControl1_Load(object sender, EventArgs e)
         {
-           // This columns of table 
+            // This columns of table 
 
             dataGridView1.Columns.Add("ID", "ID");
             dataGridView1.Columns.Add("Name", "اسم العميل");
@@ -45,97 +46,6 @@ namespace AccountingSystem
 
             return false;
         }
-        private void Button1_Click(object sender, EventArgs e)
-        {
-            // create object 
-            Customer customer = new Customer();
-            Customer.Count++;
-            customer.Name = txtName.Text;
-            customer.Address = txtAddress.Text;
-            customer.Phone = txtPhone.Text;
-
-            txtName.TabIndex = 0;
-
-            if (txtName.Text == "" || txtAddress.Text == "" || txtPhone.Text == "")
-            {
-                MessageBox.Show("please fill boxes!", "Fill", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                return;
-            }
-            else
-            {
-                if (checkExist(txtPhone.Text))
-                    return;
-               
-
-                MessageBox.Show("Clients added successfully!");
-            }
-
-           
-            Customers.Add(customer);
-            LoadCustomers();
-        }
-
-        private void Button2_Click(object sender, EventArgs e)
-        {
-            txtName.Clear();
-            txtAddress.Clear();
-            txtPhone.Clear();
-        }
-
-        private void Button4_Click(object sender, EventArgs e)
-        {
-           
-            if(selectedId == -1)
-            {
-                MessageBox.Show("chooose clients first!");
-                return;
-            }
-
-            Customer customer = Customers.First(c => Customers.Count == selectedId);
-
-            customer.Name = txtName.Text;
-            customer.Address = txtAddress.Text;
-            customer.Phone = txtPhone.Text;
-
-            LoadCustomers();
-            MessageBox.Show("updated successfully!");
-
-            foreach(Customer C in Customers)
-            {
-                if(Customers.Count == selectedId)
-                {
-                    MessageBox.Show(selectedId.ToString());
-
-                }
-            }
-
-            //txtName.Text = customer.Name;
-            //txtPhone.Text = customer.Phone;
-            //txtAddress.Text = customer.Address;
-
-            //customer.Name = txtName.Text;
-            //customer.Address = txtAddress.Text;
-            //customer.Phone = txtPhone.Text;
-
-        }
-
-        private void Button3_Click(object sender, EventArgs e)
-        {
-
-
-            if (Customer.Count > 0)
-            {
-                dataGridView1.Rows.RemoveAt(Customer.Count - 1);
-                Customer.Count--;
-            }
-            else
-            {
-                MessageBox.Show("No Clients To Delete it!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
-            }
-
-        }
-
         private void Label1_Click(object sender, EventArgs e)
         {
 
@@ -150,20 +60,133 @@ namespace AccountingSystem
 
             foreach (Customer C in Customers)
             {
-                dataGridView1.Rows.Add(Customer.Count, C.Name, C.Address, C.Phone);
+                dataGridView1.Rows.Add(C.Id, C.Name, C.Address, C.Phone);
             }
+
+                 //dataGridView1.DataSource = C;
         }
         private void DataGridView1_CellClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex > 0)
+            if(e.RowIndex >= 0)
             {
-                  selectedId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+                selectedId = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
 
                 txtName.Text = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
                 txtAddress.Text = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
                 txtPhone.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
           
+        }
+
+        private void BtnAddCleint_Click(object sender, EventArgs e)
+        {
+            Customer customer = new Customer();
+
+            if (string.IsNullOrWhiteSpace(txtName.Text))
+            {
+                MessageBox.Show("please enter client name?", "Fill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(string.IsNullOrWhiteSpace(txtAddress.Text))
+            {
+                MessageBox.Show("please enter client address?", "Fill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+            }
+            if(string.IsNullOrWhiteSpace(txtPhone.Text))
+            {
+                MessageBox.Show("please enter client phone?", "Fill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return;
+
+            }
+            else
+            {
+                if (checkExist(txtPhone.Text))
+                    return;
+
+            }
+            Client_id++;
+            customer.Id = Client_id;
+
+            customer.Name = txtName.Text;
+            customer.Address = txtAddress.Text;
+            customer.Phone = txtPhone.Text;
+
+            txtName.TabIndex = 0;
+
+            Customers.Add(customer);
+            LoadCustomers();
+
+            MessageBox.Show("Clients added successfully!");
+            Reset();
+        }
+
+        private void BtnReset_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void BtnUpdate_Click(object sender, EventArgs e)
+        {
+            if (selectedId == -1)
+            {
+                MessageBox.Show("choose clients first!");
+                return;
+            }
+
+            Customer customer = Customers.First(c => c.Id == selectedId);
+
+            customer.Name = txtName.Text;
+            customer.Address = txtAddress.Text;
+            customer.Phone = txtPhone.Text;
+
+            LoadCustomers();
+
+            MessageBox.Show("updated successfully!");
+        }
+
+        private void BtnDelete_Click(object sender, EventArgs e)
+        {
+
+            if (selectedId == -1)
+            {
+                MessageBox.Show("No Clients To Delete it!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            Customer customer = Customers.First(c => c.Id == selectedId);
+
+            Customers.Remove(customer);
+            Client_id--;
+            LoadCustomers();
+
+            selectedId = -1;
+
+            Reset();
+
+            MessageBox.Show("Delete it successfully!");
+
+        }
+        private void Reset()
+        {
+            txtName.Clear();
+            txtAddress.Clear();
+            txtPhone.Clear();
+        }
+
+        private void TxtSearch_TextChanged(object sender, EventArgs e)
+        {
+            string SearchTxt = txtSearch.Text.ToLower();
+
+            dataGridView1.Rows.Clear();
+
+            foreach(Customer customer in Customers)
+            {
+                if(customer.Name.ToLower().Contains(SearchTxt) || customer.Phone.Contains(SearchTxt))
+                {
+                    dataGridView1.Rows.Add(customer.Id, customer.Name, customer.Address, customer.Phone);
+
+                }
+            }
         }
     }
 }
