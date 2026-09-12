@@ -23,7 +23,17 @@ namespace AccountingSystem
 
         private void Login_Load(object sender, EventArgs e)
         {
+            UITheme.ApplyContent(panelImage);
+            UITheme.ApplyCard(panelLogin);
+            UITheme.ApplyTextBox(txtName);
+            UITheme.ApplyTextBox(txtPassword);
+
+
+            UITheme.ApplyButton(btnLogin);
+           // UITheme.ApplySuccessButton(btnCreateAcc);
+            UITheme.ApplyDangerButton(btnClose);
             
+            this.ForeColor = Color.White;
         }
 
         private void BtnCreateAcc_Click(object sender, EventArgs e)

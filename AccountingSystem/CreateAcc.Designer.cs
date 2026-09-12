@@ -38,12 +38,14 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtname = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
-            this.panel2.BackgroundImage = global::AccountingSystem.Properties.Resources.IT_Sector;
             this.panel2.Controls.Add(this.btnClose);
             this.panel2.Controls.Add(this.btnCreate);
             this.panel2.Controls.Add(this.label3);
@@ -121,6 +123,7 @@
             // 
             // txtPassword1
             // 
+            this.txtPassword1.Font = new System.Drawing.Font("Wide Latin", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword1.Location = new System.Drawing.Point(168, 190);
             this.txtPassword1.Multiline = true;
             this.txtPassword1.Name = "txtPassword1";
@@ -130,6 +133,7 @@
             // 
             // txtPassword
             // 
+            this.txtPassword.Font = new System.Drawing.Font("Wide Latin", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Location = new System.Drawing.Point(168, 103);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -140,6 +144,7 @@
             // 
             // txtname
             // 
+            this.txtname.Font = new System.Drawing.Font("Wide Latin", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtname.Location = new System.Drawing.Point(168, 31);
             this.txtname.Multiline = true;
             this.txtname.Name = "txtname";
@@ -149,27 +154,57 @@
             // 
             // panel1
             // 
-            this.panel1.BackgroundImage = global::AccountingSystem.Properties.Resources.IT_Sector;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(447, 127);
             this.panel1.TabIndex = 0;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label5.Location = new System.Drawing.Point(106, 59);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(233, 24);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "يرجى منك إدخال كلمة مرور قوية";
+            this.label5.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label4.Location = new System.Drawing.Point(148, 23);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(165, 24);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "مرحبا بك إالى عالمنا   ";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
             // CreateAcc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.BackColor = System.Drawing.SystemColors.ControlText;
             this.ClientSize = new System.Drawing.Size(447, 534);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "CreateAcc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAcc";
+            this.Load += new System.EventHandler(this.CreateAcc_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -186,5 +221,7 @@
         private System.Windows.Forms.TextBox txtname;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnCreate;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

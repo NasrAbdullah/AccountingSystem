@@ -65,5 +65,29 @@ namespace AccountingSystem
             txtPassword.MaxLength = 10;
             
         }
+
+        private void CreateAcc_Load(object sender, EventArgs e)
+        {
+            UITheme.ApplyContent(panel1);
+            UITheme.ApplyCard(panel2);
+
+            UITheme.ApplyTextBox(txtname);
+            UITheme.ApplyTextBox(txtPassword);
+            UITheme.ApplyTextBox(txtPassword1);
+
+            UITheme.ApplyButton(btnCreate);
+            UITheme.ApplySecondaryButton(btnClose);
+
+            UITheme.ApplyLabel(label1);
+            UITheme.ApplyLabel(label2);
+            UITheme.ApplyLabel(label3);
+
+    
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

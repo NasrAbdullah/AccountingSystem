@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccountingSystem.Classes;
+
 
 namespace AccountingSystem
 {
@@ -19,7 +21,7 @@ namespace AccountingSystem
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            panelSidebar.Width = 205;
+           // panelSidebar.Width = 205;
           
 
             panelHeader.Width = 60;
@@ -28,9 +30,37 @@ namespace AccountingSystem
            // panelContent.BackColor = Color.Green;
 
             panelLogo.Height = 80;
-           // panelLogo.BackColor = Color.Gray;
+            // panelLogo.BackColor = Color.Gray;
 
-            pictureBox1.Image = Image.FromFile("D:/PictureToDesign/random picture/shop.jpg");
+            UITheme.ApplySidebar(panelSidebar);
+            UITheme.ApplyCard(panelLogo);
+            UITheme.ApplyCard(panelُExpenses);
+            UITheme.ApplyCard(panelPurchases);
+            UITheme.ApplyCard(panelProfit);
+            UITheme.ApplyCard(panelSales);
+
+            UITheme.ApplyHeader(panelHeader);
+            panelHeader.ForeColor = Color.White;
+
+            UITheme.ApplyForm(this);
+
+            UITheme.ApplyContent(panelContent);
+
+            UITheme.ApplyButton(btnCash);
+            UITheme.ApplyButton(btnCustomers);
+            UITheme.ApplyButton(btnDashboard);
+            UITheme.ApplyButton(btnexpenses);
+            UITheme.ApplyButton(btnGoOut);
+            UITheme.ApplyButton(btnProducts);
+            UITheme.ApplyButton(btnreprts);
+            UITheme.ApplyButton(btnSales);
+            UITheme.ApplyButton(btnSettings);
+            UITheme.ApplyButton(btnPurchases);
+
+            
+
+
+           
 
            
         }
@@ -48,12 +78,14 @@ namespace AccountingSystem
 
         private void BtnDashboard_Click(object sender, EventArgs e)
         {
-            OpenControl(new DashBoardControl());
+            //  OpenControl(new MainForm());
+            
+         
         }
 
         private void BtnCustomers_Click(object sender, EventArgs e)
         {
-            OpenControl(new Clients());
+            OpenControl(new CustomersControl());
         }
 
         private void BtnSales_Click(object sender, EventArgs e)
@@ -138,7 +170,7 @@ namespace AccountingSystem
 
         private void BtnSettings_Click(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

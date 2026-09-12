@@ -8,15 +8,18 @@ namespace AccountingSystem.Models
 {
     public class Customer
     {
-        static public int Count { get; set; } = 0;
+        static public int Count { get; set; } = -1;
         public int Id { get; set; } = -1;
         public string Name { get; set; }    ="";
         public string Phone { get; set; }   ="";
         public string Address { get; set; } ="";
+        public string Email { get; set; } ="";
+        public string Notes { get; set; } ="";
        
         public Customer()
         {
            Count++;
+            Id = Count + 1;
         }
     }
     
