@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace AccountingSystem.Models
 {
-    public class Product
+    public class Vendor
     {
         public int ID { get; set; }
         public string Name { get; set; }
-        public decimal PurchasePrice { get; set; }
-        public decimal SalePrice { get; set; }
-        public int Quantity { get; set; }
+        public string Phone { get; set; }
+        public string Address { get; set; }
+        public decimal Balance { get; set; }
+
     }
 }

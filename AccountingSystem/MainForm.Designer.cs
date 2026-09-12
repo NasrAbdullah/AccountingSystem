@@ -41,7 +41,7 @@
             this.btnSettings = new System.Windows.Forms.Button();
             this.btnreprts = new System.Windows.Forms.Button();
             this.btnCash = new System.Windows.Forms.Button();
-            this.btnexpenses = new System.Windows.Forms.Button();
+            this.btnVendors = new System.Windows.Forms.Button();
             this.btnPurchases = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
@@ -156,7 +156,7 @@
             this.btnGoOut.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnGoOut.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGoOut.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnGoOut.Location = new System.Drawing.Point(27, 525);
+            this.btnGoOut.Location = new System.Drawing.Point(26, 575);
             this.btnGoOut.Name = "btnGoOut";
             this.btnGoOut.Size = new System.Drawing.Size(197, 45);
             this.btnGoOut.TabIndex = 0;
@@ -198,7 +198,7 @@
             this.btnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSettings.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnSettings.Location = new System.Drawing.Point(27, 576);
+            this.btnSettings.Location = new System.Drawing.Point(26, 524);
             this.btnSettings.Name = "btnSettings";
             this.btnSettings.Size = new System.Drawing.Size(197, 45);
             this.btnSettings.TabIndex = 0;
@@ -235,19 +235,19 @@
             this.btnCash.UseVisualStyleBackColor = false;
             this.btnCash.Click += new System.EventHandler(this.BtnCash_Click);
             // 
-            // btnexpenses
+            // btnVendors
             // 
-            this.btnexpenses.BackColor = System.Drawing.Color.Navy;
-            this.btnexpenses.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnexpenses.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnexpenses.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnexpenses.Location = new System.Drawing.Point(27, 321);
-            this.btnexpenses.Name = "btnexpenses";
-            this.btnexpenses.Size = new System.Drawing.Size(197, 45);
-            this.btnexpenses.TabIndex = 0;
-            this.btnexpenses.Text = "المصروفات";
-            this.btnexpenses.UseVisualStyleBackColor = false;
-            this.btnexpenses.Click += new System.EventHandler(this.Btnexpenses_Click);
+            this.btnVendors.BackColor = System.Drawing.Color.Navy;
+            this.btnVendors.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnVendors.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendors.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnVendors.Location = new System.Drawing.Point(27, 321);
+            this.btnVendors.Name = "btnVendors";
+            this.btnVendors.Size = new System.Drawing.Size(197, 45);
+            this.btnVendors.TabIndex = 0;
+            this.btnVendors.Text = "الموردون";
+            this.btnVendors.UseVisualStyleBackColor = false;
+            this.btnVendors.Click += new System.EventHandler(this.Btnexpenses_Click);
             // 
             // btnPurchases
             // 
@@ -304,7 +304,7 @@
             this.panelSidebar.Controls.Add(this.btnGoOut);
             this.panelSidebar.Controls.Add(this.btnCustomers);
             this.panelSidebar.Controls.Add(this.btnreprts);
-            this.panelSidebar.Controls.Add(this.btnexpenses);
+            this.panelSidebar.Controls.Add(this.btnVendors);
             this.panelSidebar.Controls.Add(this.btnPurchases);
             this.panelSidebar.Dock = System.Windows.Forms.DockStyle.Right;
             this.panelSidebar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -533,7 +533,7 @@
         private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button btnPurchases;
-        private System.Windows.Forms.Button btnexpenses;
+        private System.Windows.Forms.Button btnVendors;
         private System.Windows.Forms.Button btnCash;
         private System.Windows.Forms.Button btnreprts;
         private System.Windows.Forms.Button btnSettings;

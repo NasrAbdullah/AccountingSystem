@@ -49,7 +49,7 @@ namespace AccountingSystem
             UITheme.ApplyButton(btnCash);
             UITheme.ApplyButton(btnCustomers);
             UITheme.ApplyButton(btnDashboard);
-            UITheme.ApplyButton(btnexpenses);
+            UITheme.ApplyButton(btnVendors);
             UITheme.ApplyButton(btnGoOut);
             UITheme.ApplyButton(btnProducts);
             UITheme.ApplyButton(btnreprts);
@@ -95,7 +95,7 @@ namespace AccountingSystem
 
         private void Btnexpenses_Click(object sender, EventArgs e)
         {
-           
+            OpenControl(new VendorsControl());
         }
 
         private void PanelSidebar_Paint(object sender, PaintEventArgs e)
@@ -140,7 +140,7 @@ namespace AccountingSystem
 
         private void BtnPurchases_Click(object sender, EventArgs e)
         {
-
+            OpenControl(new PurchasesControl());
         }
 
         private void PanelContent_Paint(object sender, PaintEventArgs e)
@@ -150,7 +150,7 @@ namespace AccountingSystem
 
         private void BtnCash_Click(object sender, EventArgs e)
         {
-
+            OpenControl(new SafeControl());
         }
 
         private void Btnreprts_Click(object sender, EventArgs e)
@@ -160,7 +160,7 @@ namespace AccountingSystem
 
         private void BtnProducts_Click(object sender, EventArgs e)
         {
-
+            OpenControl(new ProductsControl());
         }
 
         private void BtnGoOut_Click(object sender, EventArgs e)

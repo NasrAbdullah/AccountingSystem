@@ -14,13 +14,7 @@ namespace AccountingSystem
 {
     public partial class SaleControl : UserControl
     {
-        private List<Product> products = new List<Product>
-        {
-            new Product{Id = 1, Name = "Laptop", Price = 1000},
-            new Product{Id = 2, Name = "Watch", Price = 500},
-            new Product{Id = 3, Name = "phone", Price = 7000}
-           
-        };
+
         
         
 
@@ -126,7 +120,7 @@ namespace AccountingSystem
             InitializeComponent();
             SetupCustomerGrid();
 
-            comboBox2.DataSource = products;
+         //   comboBox2.DataSource = Product;
 
             CurrentInvoices = new Invoice();
             
@@ -267,7 +261,7 @@ namespace AccountingSystem
 
             if(SelectedProduct != null)
             {
-               lblPrice.Text = SelectedProduct.Price.ToString();
+               lblPrice.Text = SelectedProduct.PurchasePrice.ToString();
             }
         }
 
@@ -296,7 +290,7 @@ namespace AccountingSystem
                 {
                     Product = SelectedProduct,
                     Quantity = Quantity,
-                    Price = SelectedProduct.Price
+                    Price = SelectedProduct.PurchasePrice
 
                 };
 
