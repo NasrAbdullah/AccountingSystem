@@ -58,12 +58,6 @@
     <Compile Include="AddClient.Designer.cs">
       <DependentUpon>AddClient.cs</DependentUpon>
     </Compile>
-    <Compile Include="AddProducts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddProducts.designer.cs">
-      <DependentUpon>AddProducts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Classes\UITheme.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="CreateAcc.cs">
@@ -113,15 +107,8 @@
     <Compile Include="SaleControl.Designer.cs">
       <DependentUpon>SaleControl.cs</DependentUpon>
     </Compile>
-    <Compile Include="VendorsControl.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="VendorsControl.Designer.cs" />
     <EmbeddedResource Include="AddClient.resx">
       <DependentUpon>AddClient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="AddProducts.resx">
-      <DependentUpon>AddProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateAcc.resx">
       <DependentUpon>CreateAcc.cs</DependentUpon>
@@ -146,7 +133,6 @@
     <EmbeddedResource Include="SaleControl.resx">
       <DependentUpon>SaleControl.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VendorsControl.resx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
